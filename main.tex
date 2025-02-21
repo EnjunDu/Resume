@@ -1,0 +1,392 @@
+%-------------------------
+% Resume in Latex
+% Author
+% License : MIT
+%------------------------
+
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\footskip}{4.08003pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=1cm, right=1.4cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\footskip}{4.08003pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=0mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-2mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Your Name} % Your Name
+\newcommand{\course}{Your Program} % Your Program
+\newcommand{\phone}{Your Phone Number} % Your Phone Number
+\newcommand{\emaila}{Email 1} %Email 1
+\newcommand{\emailb}{Email 2} %Email 2
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+
+
+\parbox{2.6cm}{%
+\includegraphics[width=2.35cm,clip]{YourPicture.png}
+}
+\parbox{\dimexpr\linewidth-2.9cm\relax}{
+\begin{tabularx}{\linewidth}{L r} \\
+  \textbf{\Large \name} & {\raisebox{0.0\height}{\footnotesize \faPhone}\ +86-\phone}\\
+ & \href{mailto:\emaila}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emaila}} \\
+  \course &  \href{mailto:\emailb}{\raisebox{0.0\height}{\footnotesize \faEnvelope}\ {\emailb}}\\
+  {Interested in GNN, LLM and recommendation} &  \href{https://github.com/EnjunDu}{\raisebox{0.0\height}{\footnotesize \faGithub}\ {GitHub Profile}} \\
+  {Undergraduate Student, Batch 2022} & \href{your.homepage.com}{\raisebox{0.0\height}{\footnotesize \faLinkedin}\ {Personal Blog}}
+\end{tabularx}
+}
+
+
+
+
+
+%-----------EDUCATION-----------
+\section{\textbf{Education}}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Woshi Feiwu University}{GPA/Rank: 100 / 0\%}
+      {Computer Science and Technology}{2022\textasciitilde2026}
+    \resumeSubheading
+      {National University of Singapore}{Successfully completed the program}
+      {Summer Research}{July 2024}
+  \resumeSubHeadingListEnd
+\vspace{-5.5mm}
+%
+
+
+
+%-----------------------EXPERIENCE-----------------------------
+\section{\textbf{Academic Experience}}
+  \resumeSubHeadingListStart
+
+        \resumeSubheading
+      {Your paper 1}{insititude}
+      {First Author, submitted to IJCAI 2025} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We introduced knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge .}
+    \item {We introduced knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge .}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Your paper 2}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We introduced knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge .}
+    \item {We introduced knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge .}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Your paper 3}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We introduced knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge .}
+    \item {We introduced knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge knowledge .}
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Your paper 4}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \resumeItemListEnd
+  
+    \resumeSubheading
+      {Your paper 5}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \resumeItemListEnd
+    
+    \vspace{-3.0mm}
+    
+
+
+    \resumeSubheading
+      {Your paper 6}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Your paper 7}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Your paper 8}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \resumeItemListEnd
+
+    \resumeSubheading
+      {Your paper 9}{insititude}
+      {First Author, Researching} {\href{http://www.example.com}{link}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \item {We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We We.}
+    \resumeItemListEnd
+
+
+
+    
+    
+      
+  \resumeSubHeadingListEnd
+\vspace{-8.5mm}
+
+
+
+\section{\textbf{Research Experience}}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Sky's lab}{xhs}
+      {Visiting Student} {\href{https://}{4452856394}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Your research content}
+    \item {Your research content}
+    \resumeItemListEnd
+    
+        \resumeSubheading
+      {Green Lab}{QQ}
+      {Research Assistant} {\href{https:/}{Homepage}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Your research content}
+
+    \resumeItemListEnd
+    
+    \resumeSubheading
+      {Wechat Lab}{Wechat}
+      {Research Assistant } {\href{https:/}{Homepage}}
+      \vspace{-2.0mm}
+      \resumeItemListStart
+    \item {Your research content}
+    \item {Your research content}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-6mm}
+
+
+\section{\textbf{Review experience}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{ICML2025 Reviewer} % Award
+    {} % Event
+    {2025} %Event Year
+
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+%-----------Positions of Responsibility-----------------
+\section{\textbf{Excellent Award}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{Asia-Pacific Mathematical Modeling International} % Position
+    {} %Club,Event
+    {First Prizes} %Tenure Period
+\resumePOR{China Property Modeling Contest} % Position
+    {} %Club,Event
+    {Position tenure} %Tenure Period
+\resumePOR{ISCC：Information Security and Countermeasures Contest} % Position
+    {} %Club,Event
+    {National First Prize}
+\resumePOR{Asia-Pacific Mathematical Modeling International} % Position
+    {} %Club,Event
+    {First Prizes} %Tenure Period
+\resumePOR{China Property Modeling Contest} % Position
+    {} %Club,Event
+    {Position tenure} %Tenure Period
+\resumePOR{ISCC：Information Security and Countermeasures Contest} % Position
+    {} %Club,Event
+    {National First Prize}
+\resumeSubHeadingListEnd
+\vspace{-5mm}
+
+
+
+
+%-----------Achievements-----------------
+\section{\textbf{Honors}}
+\vspace{-0.4mm}
+\resumeSubHeadingListStart
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+\resumePOR{} % Award
+    {First Class Scholarship of Beijing Institute of Technology} % Event
+    {} %Event Year
+
+
+\clearpage
+
+
+% Chinese version
+
+
+%-------------------------------------------
+\end{document}
